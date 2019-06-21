@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen" type="text/css">
+.body{
+  width:1140px;
+  margin:0 auto;
+
+}
+.type_writer{
+  margin:50px 100px;
+}
+.screen{
+  width:900px;
+  height:60px;
+  border:4px solid #000;
+  font-size: 45px;
+  padding: 2px;
+  text-align: center;
+}
+.keys{
+  width:60px;
+  height:60px;
+  margin-top: 30px;
+  background-color: #000;
+  color: #fff;
+  float:left;
+  margin-left:25px;
+  position:relative;
+}
+.no_margin_left{
+  margin-left: 0;
+}
+.clear_left{
+clear:left;
+}
+.add_more_margin_left1{
+margin-left:40px;
+}
+.add_more_margin_left2{
+margin-left:80px;
+}
+.add_more_margin_left3{
+margin-left:120px;
+}
+.add_more_margin_left4{
+margin-left:295px;
+}
+.add_more_margin_left5{
+margin-left:380px;
+}
+.align_num_content{
+  position:absolute;
+  bottom:5px;
+  left:5px;
+}
+/*sc-Special Character*/
+.align_sc{
+position: absolute;
+top:5px;
+right:5px;
+}
+.align_charc{
+  position: absolute;
+  left:22px;
+  top:22px;
+}
+.align_com{
+position:absolute;
+left:15px;
+top:20px;
+}
+.space_bar{
+  width:315px;
+  height:60px;
+  background-color: #000;
+}
+.shift_key{
+  background-color: #fff;
+  border: 2px solid #000;
+  width:150px;
+  height:60px;
+  color: #000;
+}
+.align_shift{
+  position: absolute;
+  top:20px;
+  left:35px;
+}
+
+
+  </style>
+  <title>The Type Writer</title>
+</head>
+<body class="body">
+  <div class="type_writer">
+<div id="Screen" class="screen">masaischool.com</div>
+<div onclick="press_1()" class="keys no_margin_left"><span class="align_num_content">1</span><span class="align_sc">!</span></div>
+<div onclick="press_2()" class="keys"><span class="align_num_content">2</span><span class="align_sc">@</span></div>
+<div onclick="press_3()" class="keys"><span class="align_num_content">3</span><span class="align_sc">#</span></div>
+<div onclick="press_4()" class="keys"><span class="align_num_content">4</span><span class="align_sc">$</span></div>
+<div onclick="press_5()" class="keys"><span class="align_num_content">5</span><span class="align_sc">%</span></div>
+<div onclick="press_6()" class="keys"><span class="align_num_content">6</span><span class="align_sc">^</span></div>
+<div onclick="press_7()" class="keys"><span class="align_num_content">7</span><span class="align_sc">&</span></div>
+<div onclick="press_8()" class="keys"><span class="align_num_content">8</span><span class="align_sc">*</span></div>
+<div onclick="press_9()" class="keys"><span class="align_num_content">9</span><span class="align_sc">()</span></div>
+<div onclick="press_0()" class="keys"><span class="align_num_content">0</span><span class="align_sc">)</span></div>
+<div onclick="press_DEL()" class="keys"><span class="align_charc">DEL</span></div>
+<div onclick="press_Q()" class="keys clear_left add_more_margin_left1"><span class="align_charc">Q</span></div>
+<div onclick="press_W()" class="keys"><span class="align_charc">W</span></div>
+<div onclick="press_E()" class="keys"><span class="align_charc">E</span></div>
+<div onclick="press_R()" class="keys"><span class="align_charc">R</span></div>
+<div onclick="press_T()" class="keys"><span class="align_charc">T</span></div>
+<div onclick="press_Y()" class="keys"><span class="align_charc">Y</span></div>
+<div onclick="press_U()" class="keys"><span class="align_charc">U</span></div>
+<div onclick="press_I()" class="keys"><span class="align_charc">I</span></div>
+<div onclick="press_O()" class="keys"><span class="align_charc">O</span></div>
+<div onclick="press_P()" class="keys"><span class="align_charc">P</span></div>
+<div onclick="press_A()" class="keys clear_left add_more_margin_left2"><span class="align_charc">A</span></div>
+<div onclick="press_S()" class="keys"><span class="align_charc">S</span></div>
+<div onclick="press_D()" class="keys"><span class="align_charc">D</span></div>
+<div onclick="press_F()" class="keys"><span class="align_charc">F</span></div>
+<div onclick="press_G()" class="keys"><span class="align_charc">G</span></div>
+<div onclick="press_H()" class="keys"><span class="align_charc">H</span></div>
+<div onclick="press_J()" class="keys"><span class="align_charc">J</span></div>
+<div onclick="press_K()" class="keys"><span class="align_charc">K</span></div>
+<div onclick="press_L()" class="keys"><span class="align_charc">L</span></div>
+<div onclick="press_Z()" class="keys clear_left add_more_margin_left3"><span class="align_charc">Z</span></div>
+<div onclick="press_X()" class="keys"><span class="align_charc">X</span></div>
+<div onclick="press_C()" class="keys"><span class="align_charc">C</span></div>
+<div onclick="press_V()" class="keys"><span class="align_charc">V</span></div>
+<div onclick="press_B()" class="keys"><span class="align_charc">B</span></div>
+<div onclick="press_N()" class="keys"><span class="align_charc">N</span></div>
+<div onclick="press_M()" class="keys"><span class="align_charc">M</span></div>
+<div onclick="press_com()" class="keys"><span class="align_com">.com</span></div>
+<div onclick="press_space()" class="clear_left keys space_bar add_more_margin_left4">&nbsp;</div>
+
+
+<div onclick="press_shift()" id="shift" class="keys clear_left shift_key add_more_margin_left5"><span class="align_shift">Shift Key</span></div>
+  </div>
+
+
+<script type="text/javascript">
+
+var s=false;
+
+
+
+function press_1(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'!';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+1;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+
+
+}
+function press_2(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'@';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+2;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_3(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'#';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+3;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_4(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'$';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+4;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+
+
+}
+function press_5(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'%';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+5;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_6(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'^';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+6;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_7(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'&';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+7;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+
+}
+function press_8(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'*';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+8;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_9(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +'(';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+9;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+}
+function press_0(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+  }
+   if (s==true) {
+a= a +')';
+document.getElementById('shift').style.color='#000';
+}
+else{
+  a=a+0;
+}
+document.getElementById('Screen').innerHTML = a ;
+
+s=false;
+document.getElementById('press_shift').innerHTML.style.color="#000";
+
+}
+function press_DEL(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+  var b =a.slice(0,a.length-1);
+document.getElementById('Screen').innerHTML=b;
+}
+function press_Q(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+
+document.getElementById('Screen').innerHTML= a+'q';
+}
+function press_W(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+
+document.getElementById('Screen').innerHTML=a+'w';
+}
+function press_E(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'E';
+}
+function press_R(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'r';
+}
+function press_T(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'t';
+}
+function press_Y(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'y';
+}
+function press_U(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'u';
+}
+function press_I(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'i';
+}
+function press_O(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'o';
+}
+function press_P(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'p';
+}
+function press_A(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'a';
+}
+function press_S(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'s';
+}
+function press_D(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'d';
+}
+function press_F(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  };
+
+document.getElementById('Screen').innerHTML=a+'f';
+}
+function press_G(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'g';
+}
+function press_H(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'h';
+}
+function press_J(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'i';
+}
+function press_K(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'k';
+}
+function press_L(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'l';
+}
+function press_Z(){
+  var a =document.getElementById('Screen').innerHTML;
+  if(a=="masaischool.com"){
+    a=a.slice(a.length)
+  }
+  var a =document.getElementById('Screen').innerHTML;
+document.getElementById('Screen').innerHTML=a+'z';
+}
+function press_X(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'x';
+}
+function press_C(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'c';
+}
+function press_V(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'v';
+}
+function press_B(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'b';
+}
+function press_N(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'n';
+}
+function press_M(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'m';
+}
+function press_com(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+'.com';
+}
+function press_space(){
+  var a =document.getElementById('Screen').innerHTML;
+    if(a=="masaischool.com"){
+      a=a.slice(a.length);
+
+  }
+
+document.getElementById('Screen').innerHTML=a+" ";
+}
+
+function press_shift(){
+  document.getElementById('shift').style.color= "green";
+
+   s= true;
+
+}
+
+
+
+</script>
+
+</body>
+</html>
